@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border-subtle;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ink text-fg font-body antialiased;
+    background-image: radial-gradient(
+        circle at 15% 0%,
+        rgba(139, 124, 246, 0.12),
+        transparent 45%
+      ),
+      radial-gradient(circle at 100% 20%, rgba(242, 184, 75, 0.08), transparent 40%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background-color: rgba(139, 124, 246, 0.35);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #8b7cf6;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b0d12;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2f3d;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a4154;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] shadow-glass;
+  }
+
+  .glass-strong {
+    @apply bg-white/[0.06] backdrop-blur-2xl border border-white/[0.10] shadow-glass;
+  }
+
+  .container-px {
+    @apply px-6 sm:px-8 lg:px-12;
+  }
+
+  .section-pad {
+    @apply py-20 sm:py-28;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-violet-200;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(120deg, #edeff3 30%, #c9c0fb 60%, #f2b84b 100%);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-semibold text-ink transition-all duration-200 hover:bg-violet-400 hover:shadow-glow-violet active:scale-[0.98];
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-amber/40 bg-amber/10 px-6 py-3 text-sm font-semibold text-amber-400 backdrop-blur-md transition-all duration-200 hover:border-amber/60 hover:bg-amber/20 active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-fg backdrop-blur-md transition-all duration-200 hover:border-white/30 hover:bg-white/[0.07] active:scale-[0.98];
+  }
+
+  .tag-chip {
+    @apply inline-flex items-center gap-1.5 rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 font-mono text-xs text-mist transition-colors hover:border-violet/40 hover:text-violet-200;
+  }
+}
