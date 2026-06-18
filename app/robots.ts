@@ -1,5 +1,5 @@
-import type { MetadataRoute } from "next";
-import { siteConfig } from "@/data/nav";
+import { MetadataRoute } from "next";
+export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: `${siteConfig.url}/sitemap.xml`,
+    sitemap: "https://barkatimishba26-creator.github.io/portfolio/sitemap.xml",
   };
 }
