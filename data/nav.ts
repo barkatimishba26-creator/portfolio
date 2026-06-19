@@ -6,7 +6,7 @@ export const navLinks: NavLink[] = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Testimonials", href: "#testimonials" },
+  // { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -23,7 +23,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/barkatimishba26-creator",
+    href: "https://github.com/mishbazuberbarkati",
     icon: Github,
   },
    {

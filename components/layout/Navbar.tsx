@@ -36,7 +36,7 @@ export function Navbar() {
             href="#hero"
             className="tracking-tight w-[25%]"
           >
-            <img src="logo.png" alt="logo" className="w-[25%]" />
+            <img src="logo.png" alt="logo" className="w-[85%] md:w-[25%]" />
           </a>
 
           <ul className="hidden items-center gap-8 md:flex">
